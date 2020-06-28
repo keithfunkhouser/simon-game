@@ -93,6 +93,14 @@ $(document).keydown(function() {
     }
 });
 
+$(".btn").on("click", function() {
+    if (patternCPU.length === 0) {
+        setTimeout(function(){
+            playLevel();
+        }, 500);
+    }
+});
+
 // Game Logic
 function checkPatterns() {
     if (patternCPU.length > 0) {
